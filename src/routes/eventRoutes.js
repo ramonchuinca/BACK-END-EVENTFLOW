@@ -6,9 +6,7 @@ import {
   updateEvent,
   deleteEvent,
 } from "../controllers/eventController.js";
-import eventRoutes from "./routes/eventRoutes.js";
 
-app.use("/api/events", eventRoutes);
 
 const router = express.Router();
 

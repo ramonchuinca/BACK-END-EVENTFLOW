@@ -23,8 +23,8 @@ export const updateEvent = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const updatedEvent = await Event.findOneAndUpdate(
-      { id: id }, // 🔥 ESSENCIAL (não usar _id)
+    const updatedEvent = await Event.findByIdAndUpdate(
+      id,
       req.body,
       { new: true }
     );
